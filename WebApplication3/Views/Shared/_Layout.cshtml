@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg px-5 py-4">
+        <a class="navbar-brand" href="#">University of Paulin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active m-4">
+                    <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item m-4">
+                    <a class="nav-link" href="#">Lançar Notas</a>
+                </li>
+                <li class="nav-item m-4">
+                    <a class="nav-link" href="#">Minha Grade</a>
+                </li>
+                <li class="nav-item m-4">
+                    <a class="nav-link" href="#">Meus Professores</a>
+                </li>
+                <li class="nav-item m-4">
+                    <a class="nav-link" href="#">Sobre a Universidade</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="app">
+        <div class="container">
+            <div class="row">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 mx-auto">
+                    <div class="row">
+                        <div class="col-md-6 align-self-center">
+                            <a href="javascript:void(0)" class="brand">University of Paulin</a>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Home</li>
+                                <li>Minhas Notas</li>
+                                <li>Minha Grade</li>
+                                <li>Meus Professores</li>
+                                <li>Sobre a Universidade</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 mx-auto rights">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="text-center">
+                                @DateTime.Now.Year - University of Paulin - All rights reserved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
